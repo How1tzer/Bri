@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bri/static/css/main.0f461410.css",
+    "main.js": "/Bri/static/js/main.6ac912f0.js",
+    "index.html": "/Bri/index.html",
+    "main.0f461410.css.map": "/Bri/static/css/main.0f461410.css.map",
+    "main.6ac912f0.js.map": "/Bri/static/js/main.6ac912f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f461410.css",
+    "static/js/main.6ac912f0.js"
+  ]
+}
