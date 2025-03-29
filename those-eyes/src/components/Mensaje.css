@@ -1,28 +1,32 @@
 .mensaje-container {
-    text-align: center;
-    margin-top: 20px;
-  }
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mensaje {
+  font-size: 2rem;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  color: #F7FFF7;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
   
-  .mensaje {
-    font-size: 2rem;
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
-    color: #F7FFF7;
-    margin-bottom: 20px;
+}
+
+@keyframes fadeInUp {
+  0% {
     opacity: 0;
-    animation: fadeInUp 1s ease-in-out;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.4);
+    transform: translateY(-20px);
   }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}

@@ -9,24 +9,41 @@ body {
 }
 
 .App {
-  position: relative;
-  min-height: 100vh;
-  z-index: 1;
+  position: relative; 
+  text-align: center;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;  
+  overflow-y: hidden;
+}
+
+.flower {
+  position: absolute; 
+  width: 500px; 
+  height: 500px; 
+  bottom: 10vh; 
+  transform: translateX(-50%); 
 }
 
 h1 {
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.4);
   font-family: 'Dancing Script', cursive;
   font-size: 4rem;
   color: #4ECDC4;
-  opacity: 0;  /* Se comienza con opacidad 0 */
-  animation: fadeIn 1s ease-out forwards, fadeInUp 1s ease-out forwards;  /* Se agregan ambas animaciones */
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  position: relative; 
+  z-index: 1;
+  opacity: 0; /* Empieza con el texto oculto */
+  animation: fadeIn 2s ease-out forwards; /* Animación para que aparezca el texto */
 }
 
 @keyframes fadeIn {
-  to {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
