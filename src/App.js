@@ -2,9 +2,8 @@ import React from 'react';
 import './App.css';
 import Mensaje from './components/Mensaje';
 import Lottie from 'lottie-react';
-import yellow_rose from '/workspaces/Bri/those-eyes/src/components/animations/Animation - 1743207865937.json';
-import yellow_flower from '/workspaces/Bri/those-eyes/src/components/animations/Animation - 1743207968245.json';
-import pink_flower from '/workspaces/Bri/those-eyes/src/components/animations/Animation - 1743208000894.json';
+import yellow_flower from '/workspaces/Bri/src/components/animations/Animation - 1743207968245.json';
+import pink_flower from '/workspaces/Bri/src/components/animations/Animation - 1743208000894.json';
 
 function App() {
   return (
