@@ -1,29 +1,43 @@
-import React, { useState } from 'react';
-import './Mensaje.css';
+import React, { useState, useEffect } from 'react';
+import './Mensaje.css'; // Asegúrate de tener el archivo CSS para los estilos
 
-const mensajes = [
-  "Eres la razón de mis sonrisas 😊",
-  "Cada día contigo es un regalo 🎁",
-  "Te amo más de lo que puedo expresar ❤️",
-  "No hay lugar donde prefiera estar que a tu lado 🌸",
-  "Eres mi inspiración y mi felicidad ✨",
-];
+const Mensaje = () => {
+  // Lista de mensajes para mostrar
+  const mensajes = [
+    '¡Hola! Este es tu primer mensaje.',
+    '¡Sorpresa! Aquí viene otro mensaje.',
+    '¡Espero que estés sonriendo! 😄',
+    '¡Este es un mensaje más! 🎉'
+  ];
 
-function Mensaje() {
-  const [mensajeActual, setMensajeActual] = useState(mensajes[0]);
+  // Generamos un índice aleatorio inicial para el primer mensaje
+  const getRandomIndex = () => Math.floor(Math.random() * mensajes.length);
 
-  // Función para cambiar el mensaje
-  const cambiarMensaje = () => {
-    const nuevoMensaje = mensajes[Math.floor(Math.random() * mensajes.length)];
-    setMensajeActual(nuevoMensaje);
+  // Estado para el mensaje actual, con un índice aleatorio
+  const [mensajeIndex, setMensajeIndex] = useState(getRandomIndex);
+
+  // Función para cambiar el mensaje al hacer clic o tocar
+  const handleClick = () => {
+    setMensajeIndex((prevIndex) => (prevIndex + 1) % mensajes.length);
   };
+
+  // Usamos useEffect para agregar el manejador de eventos a todo el documento
+  useEffect(() => {
+    // Agregamos el evento de clic al documento
+    document.addEventListener('click', handleClick);
+
+    // Limpiamos el evento cuando el componente se desmonta
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
 
   return (
     <div className="mensaje-container">
-      <p className="mensaje">{mensajeActual}</p>
-      <button onClick={cambiarMensaje}>💖 Cambiar Mensaje</button>
+      {/* Muestra el mensaje actual */}
+      <div className="mensaje">{mensajes[mensajeIndex]}</div>
     </div>
   );
-}
+};
 
 export default Mensaje;

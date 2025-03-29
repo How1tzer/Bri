@@ -4,34 +4,24 @@
   }
   
   .mensaje {
-    font-size: 1.5rem;
-    color: #ff4d6d;
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: #F7FFF7;
     margin-bottom: 20px;
-    animation: fadeIn 0.5s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.4);
   }
   
-  button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #ff4d6d;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #ff1e50;
-  }
-  
-  /* Animación para cambio de mensaje */
-  @keyframes fadeIn {
-    from {
+  @keyframes fadeInUp {
+    0% {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(-20px);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateY(0);
     }
